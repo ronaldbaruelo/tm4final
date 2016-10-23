@@ -1,0 +1,29 @@
+All the program sql syntax are inside the phpadmin
+
+
+A.Create Table
+
+CREATE TABLE ‘player’ (
+‘id int’ INT(11) AUTO_INCREMENT,
+firstname char(20),
+lastname char(20),
+email char(30),
+phone varchar(20)
+PRIMARY KEY(‘ID’)
+) ENGINE=InnoDB;;
+
+
+B.Insert Table
+
+INSERT INTO `player` (`id`, `firstname`, `lastname`, `email`, `phone`) VALUES (1, 'Ronald', 'Baruelo', 'rcbaruelo1029@gmail.com', '0275625535'), (2, 'Rose Vi', 'Baruelo', 'rosevicbaruelo@yahoo.com', '0296501317') 
+
+C. Delete table
+
+
+DELETE FROM `player` WHERE id=5;
+
+D. Retrieves table
+
+SELECT * FROM player WHERE ‘email’ LIKE ‘%gmail.com’;
+
+

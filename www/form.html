@@ -1,0 +1,86 @@
+<html>
+<!-- BIT695 Web Technologies -->
+<head>
+    <link rel="stylesheet" href="style.css">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1"/>
+    <title>Board games aficionados</title>
+
+
+
+</head>
+
+
+
+    
+<body onload="document.demo.memberid.focus();">
+<?php
+
+$mydbc = mysqli_connect('localhost', 'ronaldbaruelo' , '1029', 'player') 
+ or die ('Could not connect to the mysql database');
+
+echo"Succesfull"
+
+?>
+
+    <header>
+        <h1>Board games aficionados</h1>
+        <nav id="follow_me">
+            <ul>
+                <li><a href="Events.html">Weekly Calender</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+ <h2>Member Login Form</h2>
+
+<form name="demo"  onsubmit="return formValidation();" action="#">
+
+<table>
+
+<!-- First name should not be empty and should be a string not a number -->
+<tr><td>
+Member ID:
+</td><td>
+<input type="text" name="memberid" size="20" maxlength="50"/>
+</td></tr>
+
+<!--First name should not be empty and should be a string not a number -->
+<tr><td>
+First name:
+</td><td>
+<input type="text" name="firstname" size="20" maxlength="50"/>
+</td></tr>
+<!-- Last name should not be empty and should be a string not a number -->
+<tr><td>
+Last name:
+</td><td>
+<input type="text" name="lastname" size="20" maxlength="50"/>
+</td></tr>
+
+<!-- E-mail should not be empty and should be a string not a number  -->
+<tr><td>
+E-Mail:
+</td><td>
+<input type="text" name="email" id="email" size="35" maxlength="50"/>
+</td></tr>
+
+<!-- E-mail should not be empty and should be a string not a number  -->
+<tr><td>
+Phone:(Format)[+xx-xxxx-xxxx, +xx.xxxx.xxxx, +xx xxxx xxxx]
+</td><td>
+<input type="text" name="phone" id="phone" size="35" maxlength="50"/>
+</td></tr>
+</table>
+<input type="submit" name="submit" />
+</form>
+    </main>
+    <footer>
+        <i><p>Board games aficionados</i></p><p>1970-2015</p>
+    </footer>
+
+    <script src="validation.js"></script>
+</body>
+</html>
